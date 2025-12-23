@@ -1,0 +1,113 @@
+
+        *{
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+    font-family: 'Segoe UI', Verdana;
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mrsilicone.co.in%2Fwp-content%2Fuploads%2F2020%2F12%2FCosmetic-Silicones-Application-Of-Silicone-Oil-In-Cosmetics.jpg&f=1&nofb=1&ipt=2ca9aa2c375639eaa92a20f059477646b5a48a1740e4533a12e25bb6bb297b7b");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+        }
+Image
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        nav {
+            background-color:chocolate;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        nav a {
+            color: white;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            color:plum;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        .product-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+        
+        .price {
+            color: #667eea;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        button {
+            background-color: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color:aqua;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
