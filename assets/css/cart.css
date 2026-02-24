@@ -1,0 +1,16 @@
+
+ .cart-icon{
+    background-image: url('\assets\Images\backgroundimage.jpg');
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+.cart{
+    display: none;
+    border: 1px solid black;
+    padding: 10px;
+    width: 250px;
+    margin-top: 10px;
+}

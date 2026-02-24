@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Information</title>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+            var course = document.getElementById("selectOption").value;
+
+            if (name === "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password cannot be empty");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Login Successful!\nCourse: " + course);
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <form onsubmit="return validateForm()">
+
+        <input type="text" id="name" placeholder="Enter your name">
+        <br/><br/>
+
+        <input type="password" id="password" placeholder="Enter your password">
+        <br/><br/>
+
+        <input type="password" id="confirmPassword" placeholder="Confirm password">
+        <br/><br/>
+
+        <select id="selectOption">
+            <option value="">Select Course</option>
+            <option value="BCA">BCA</option>
+            <option value="BIM">BIM</option>
+        </select>
+        <br/><br/>
+
+        <input type="submit" value="Login">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="\assets\css\cart.css">
+   
+</head>
+
+<body>
+
+<div class="cart-icon" onclick="toggleCart()">
+🛒 Cart (<span id="cart-count">0</span>)
+</div>
+
+<div id="cart" class="cart">
+<h2>Your Cart</h2>
+<ul id="cart-items"></ul>
+<p>Total: Rs <span id="cart-total">0</span></p>
+<button onclick="clearCart()">Clear Cart</button>
+</div>
+
+<h3>Products</h3>
+
+<button onclick="addToCart('Flawless Foundation',2000)">Flawless Foundation</button>
+<button onclick="addToCart('Shimmer Eyeshadow',2100)">Shimmer Eyeshadow</button>
+<button onclick="addToCart('Shimmer Blush',500)">Shimmer Blush</button>
+<button onclick="addToCart('Concealer',800)">Concealer</button>
+<button onclick="addToCart('Lip Liner',800)">Lip Liner</button>
+<button onclick="addToCart('Lip Tint',700)">Lip Tint</button>
+<button onclick="addToCart('Primer',1000)">Primer</button>
+<button onclick="addToCart('Volume Mascara',900)">Mascara</button>
+<button onclick="addToCart('Scalpy',150)">Scalpy</button>
+<button onclick="addToCart('Shampoo',800)">Shampoo</button>
+<button onclick="addToCart('Vitamins',1500)">Vitamins</button>
+<button onclick="addToCart('Hair Serum',1050)">Hair Serum</button>
+<button onclick="addToCart('Conditioner',950)">Conditioner</button>
+<button onclick="addToCart('Curly Hair Brush',1900)">Curly Hair Brush</button>
+
+<script>
+
+let cart = [];
+let total = 0;
+
+function addToCart(product, price){
+    cart.push({product, price});
+    total += price;
+    displayCart();
+}
+
+function displayCart(){
+    let items = document.getElementById("cart-items");
+    items.innerHTML = "";
+
+    cart.forEach(item => {
+        let li = document.createElement("li");
+        li.textContent = item.product + " - Rs " + item.price;
+        items.appendChild(li);
+    });
+
+    document.getElementById("cart-total").innerText = total;
+    document.getElementById("cart-count").innerText = cart.length;
+}
+
+function toggleCart(){
+    let cartBox = document.getElementById("cart");
+    cartBox.style.display = cartBox.style.display === "block" ? "none" : "block";
+}
+
+function clearCart(){
+    cart = [];
+    total = 0;
+    displayCart();
+}
+
+</script>
+
+</body>
+</html>
